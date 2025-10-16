@@ -15,9 +15,9 @@
                     <Border BorderBrush="Black" BorderThickness="1">
                         <Grid Background="{Binding DiscountColor}">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.1*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                                <ColumnDefinition Width="200"></ColumnDefinition>
+                                <ColumnDefinition Width="800"></ColumnDefinition>
+                                <ColumnDefinition Width="150"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
                             <Border BorderBrush="Black" BorderThickness="1" Grid.Column="0" Margin="20, 10, 10, 10">
