@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaidyakovShoes", "SaidyakovShoes\SaidyakovShoes.csproj", "{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Debug|x64.ActiveCfg = Debug|x64
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Debug|x64.Build.0 = Debug|x64
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Release|x64.ActiveCfg = Release|x64
+		{DA7D304B-BE87-4D18-812C-3B194CCFFEFF}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {36FED900-8A95-459B-97C0-2521FA493833}
+	EndGlobalSection
+EndGlobal
