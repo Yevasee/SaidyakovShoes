@@ -9,7 +9,38 @@
       Title="PageProducts" FontFamily="Times New Roman">
 
     <Grid>
-        <ListView Name="listViewProducts">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Grid.Row="0">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="Поиск" FontSize="15"/>
+                <TextBox Name="TextBoxSearch" TextChanged="TextBoxSearch_TextChanged" Width="200" FontSize="15"></TextBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Margin="10">
+                <TextBlock Text="Фильтр по поставщику" FontSize="15"/>
+                <ComboBox Name="ComboBoxFilter" SelectionChanged="ComboBoxFilter_SelectionChanged" FontSize="15" Width="150" Background="Transparent">
+                    <TextBlock>Все поставщики</TextBlock>
+                    <TextBlock>Kari</TextBlock>
+                    <TextBlock>Обувь для вас</TextBlock>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Bottom">
+                <ComboBox Name="ComboBoxSorter" SelectionChanged="ComboBoxSorter_SelectionChanged" FontSize="15" Width="200">
+                    <TextBlock>Без сортировки</TextBlock>
+                    <TextBlock>По возрастанию стоимости</TextBlock>
+                    <TextBlock>По убыванию стоимости</TextBlock>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+
+
+        <ListView Name="listViewProducts" Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1">
@@ -26,7 +57,7 @@
                                         <Binding Path="ProductPhoto">
                                             <Binding.TargetNullValue>
                                                 <ImageSource>
-                                                    /img/picture.png
+                                                    /img/Icon.png
                                                 </ImageSource>
                                             </Binding.TargetNullValue>
                                         </Binding>
