@@ -32,9 +32,12 @@ namespace SaidyakovShoes
         public void UpdateProducts()
         {
             listProductsForPage = SaidyakovShoesEntities.GetContext().Product.ToList();
+
             ComboBoxSorterMaker();
             ComboBoxFilterMaker();
             TextBoxSearchMaker();
+
+            listViewProducts.ItemsSource = listProductsForPage;
         }
 
         private void ComboBoxSorter_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -56,24 +59,18 @@ namespace SaidyakovShoes
         {
             switch (ComboBoxSorter.SelectedIndex)
             {
-                case 0: listProductsForPage = listProductsForPage.ToList(); break;
                 case 1: listProductsForPage = listProductsForPage.OrderBy(p => p.ProductQuantityInStock).ToList(); break;
                 case 2: listProductsForPage = listProductsForPage.OrderByDescending(p => p.ProductQuantityInStock).ToList(); break;
             }
-
-            listViewProducts.ItemsSource = listProductsForPage;
         }
 
         private void ComboBoxFilterMaker()
         {
             switch (ComboBoxFilter.SelectedIndex)
             {
-                case 0: listProductsForPage = listProductsForPage.ToList(); break;
                 case 1: listProductsForPage = listProductsForPage.Where(p => (p.ProductImporter.Equals("Kari"))).ToList(); break;
                 case 2: listProductsForPage = listProductsForPage.Where(p => (p.ProductImporter.Equals("Обувь для вас"))).ToList(); break;
             }
-
-            listViewProducts.ItemsSource = listProductsForPage;
         }
         private void TextBoxSearchMaker()
         {
@@ -92,8 +89,6 @@ namespace SaidyakovShoes
                                                                    || p.ProductDescription.ToLower().Contains(searchText[i])
                                                                    )).ToList();
             }
-
-            listViewProducts.ItemsSource = listProductsForPage;
         }
     }
 }
