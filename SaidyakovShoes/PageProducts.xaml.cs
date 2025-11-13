@@ -24,10 +24,10 @@ namespace SaidyakovShoes
         public PageProducts()
         {
             InitializeComponent();
-            listProductsForPage = SaidyakovShoesEntities.GetContext().Product.ToList();
+
+            UpdateProducts();
             ComboBoxSorter.SelectedIndex = 0;
             ComboBoxFilter.SelectedIndex = 0;
-            UpdateProducts();
         }
         public void UpdateProducts()
         {
@@ -75,12 +75,14 @@ namespace SaidyakovShoes
         private void TextBoxSearchMaker()
         {
             string[] searchText = TextBoxSearch.Text.ToLower().Split(' ');
+            
             for (int i = 0; i < searchText.Length; i++)
             {
                 listProductsForPage = listProductsForPage.Where(p => (p.ProductArticleNumber.ToLower().Contains(searchText[i])
                                                                    || p.ProductName.ToLower().Contains(searchText[i])
                                                                    || p.ProductUnit.ToLower().Contains(searchText[i])
                                                                    || p.ProductCost.ToString().ToLower().Contains(searchText[i])
+                                                                   || p.ProductCostWithDiscount.ToString().ToLower().Contains(searchText[i])
                                                                    || p.ProductDiscountAmount.ToString().ToLower().Contains(searchText[i])
                                                                    || p.ProductImporter.ToLower().Contains(searchText[i])
                                                                    || p.ProductManufacturer.ToLower().Contains(searchText[i])
