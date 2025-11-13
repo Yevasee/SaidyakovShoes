@@ -31,16 +31,16 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Bottom">
-                <ComboBox Name="ComboBoxSorter" SelectionChanged="ComboBoxSorter_SelectionChanged" FontSize="15" Width="200">
+                <ComboBox Name="ComboBoxSorter" SelectionChanged="ComboBoxSorter_SelectionChanged" FontSize="15" Width="250">
                     <TextBlock>Без сортировки</TextBlock>
-                    <TextBlock>По возрастанию количества на складе</TextBlock>
-                    <TextBlock>По убыванию количества на складе</TextBlock>
+                    <TextBlock>По возрастанию кол-ва на складе</TextBlock>
+                    <TextBlock>По убыванию кол-ва на складе</TextBlock>
                 </ComboBox>
             </StackPanel>
         </StackPanel>
 
 
-        <ListView Name="listViewProducts" Grid.Row="1">
+        <ListView Name="listViewProducts" Grid.Row="1" HorizontalAlignment="Center">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Black" BorderThickness="1">
